@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Pokemon({ name, image,id }) {
   return (
-    <div>
-      <Link to={`/pokemon/${id}`}>
-      <div>{name}</div>
-      <div>
+    <div className="pokemon-card">
+      <Link to={`/pokemon/${id}`} className="pokemon-card-link">
+      <div className="pokemon-card-image">
         <img src={image} />
       </div>
+      <div className="pokemon-card-name">{name}</div>
       </Link>
     </div>
   );

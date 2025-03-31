@@ -52,6 +52,7 @@ function Search({ updateSearchTerm }) {
 
   return (
     <div className="pokemon-wrapper">
+      <div className="search-bar">
       <input
         id="pokemon-name-search"
         type="text"
@@ -59,13 +60,14 @@ function Search({ updateSearchTerm }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      </div>
 
       <div className="pokemon-list">
         {filteredPokemon.length > 0 ? (
           filteredPokemon.map((pokemon) => (
             <div key={pokemon.id} className="pokemon-card" onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
-              <h3>{pokemon.name}</h3>
               <img src={pokemon.image} alt={pokemon.name} />
+              <h3 className="pokemon-card-name">{pokemon.name}</h3>
             </div>
           ))
         ) : (

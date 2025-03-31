@@ -1,0 +1,30 @@
+.search-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#pokemon-name-search{
+    width: 500px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.pokemon-list{
+    display:flex ;
+    margin-top: 0.3%;
+    flex-wrap: wrap;
+}
+.pokemon-card{
+    display: flex;
+    flex-direction: column;
+}
+.pokemon-card img{
+    height: 70px;
+    width: 70px;
+}
+.pokemon-card-name{
+    font-size: 0.6rem;
+}

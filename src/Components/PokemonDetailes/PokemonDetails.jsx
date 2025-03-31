@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "./PokemonDetails.css"
 
 function PokemonDetails() {
   const { id } = useParams();
@@ -64,19 +65,22 @@ function PokemonDetails() {
   if (!pokemon) return <div>Loading...</div>;
 
   return (
-    <div>
-      <img src={pokemon.image} alt={pokemon.name} />
-      <h3>{pokemon.name}</h3>
-      <div>Height: {pokemon.height}</div>
-      <div>Weight: {pokemon.weight}</div>
-      <div>
+    <div className="pokemon-details-wrapper">
+      <div className="pokemon-details">
+      <img src={pokemon.image} alt={pokemon.name} className="pokemon-image"/>
+      <h2 className="pokemon-name">{pokemon.name}</h2>
+      <div className="pokemon-hw">Height: {pokemon.height}</div>
+      <div className="pokemon-hw">Weight: {pokemon.weight}</div>
+      <div className="pokemon-types">
         <strong>Types:</strong> {pokemon.types.join(", ")}
       </div>
       <button onClick={() => navigate("/")} style={{ marginBottom: "10px", padding: "5px 10px", cursor: "pointer" }}>
         Go to Home
       </button>
+      </div>
+      <div className="pokemon-similar-wrapper">
       <h3>Similar Pokémon</h3>
-      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }} className="pokemon-similar-image">
         {relatedPokemon.length > 0 ? (
           relatedPokemon.map((p) => (
             <div key={p.id} onClick={() => navigate(`/pokemon/${p.id}`)} style={{ cursor: "pointer", textAlign: "center" }}>
@@ -87,6 +91,7 @@ function PokemonDetails() {
         ) : (
           <p>No similar Pokémon found</p>
         )}
+      </div>
       </div>
     </div>
   );
