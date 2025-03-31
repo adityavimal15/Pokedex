@@ -9,12 +9,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    background: linear-gradient(rgba(0, 128, 0, 0.644),rgba(0, 0, 255, 0.658));
-    /* background-image: url('C:\Users\adita\Desktop\PokeDex\src\assets\Background3.jpg');
+    background-image: url('C:\Users\adita\Desktop\PokeDex\src\assets\Background4.jpg');
     background-repeat: no-repeat;
-    background-size:fixed;
-    background-position: center; */
-    /* width: 100%; */
+    background-size:cover;
+    background-position: cover;
+    width: 100%;
     min-height: 100vh;
 }
 .app-wrapper h1{
@@ -25,4 +24,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(30px);
+}
+
+@media screen and (max-width:400px){
+    .app-wrapper h1{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .app-wrapper h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:300px){
+    .app-wrapper h1{
+        font-size: 2.3rem;
+    }
 }

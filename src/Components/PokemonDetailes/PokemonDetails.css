@@ -49,6 +49,12 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.pokemon-similar-image{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2%;
+}
 
 .pokemon-similar-image img{
     width: 70px;
@@ -59,3 +65,10 @@
     font-family: Boldonse;
     letter-spacing: 1px;
 }
+
+@media screen and (max-width:550px) {
+    .pokemon-image{
+        margin-top: 8%;
+    }
+}
+

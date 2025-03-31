@@ -10,12 +10,15 @@
     height: 40px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
+    margin-top: 8%;
 }
 
 .pokemon-list{
     display:flex ;
     margin-top: 0.3%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .pokemon-card{
     display: flex;
@@ -27,4 +30,53 @@
 }
 .pokemon-card-name{
     font-size: 0.6rem;
+}
+
+@media screen and (max-width:550px) {
+    #pokemon-name-search{
+        width: 480px;
+        height: 30px;
+        margin-top: 8%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    #pokemon-name-search{
+        width: 430px;
+        height: 30px;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #pokemon-name-search{
+        width: 380px;
+        height: 30px;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #pokemon-name-search{
+        width: 350px;
+        height: 30px;
+        margin-top: 12%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    #pokemon-name-search{
+        width: 320px;
+        height: 30px;
+        margin-top: 14%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    #pokemon-name-search{
+        width: 280px;
+        height: 30px;
+    }
 }

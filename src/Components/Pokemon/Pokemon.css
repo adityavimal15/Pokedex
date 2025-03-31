@@ -35,5 +35,5 @@
 }
 
 .pokemon-card:hover{
-    box-shadow: 0 0 25px white;
+    box-shadow: 0 0 25px rgb(17, 221, 17);
 }
